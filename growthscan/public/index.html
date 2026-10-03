@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrowthScan by Ads Inside</title>
+<link rel="icon" href="/assets/ads-inside.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body data-status="none">
+<div class="watermark" aria-hidden="true">DRAFT</div>
+<div class="wrap">
+  <header class="top"><div class="brand"><img src="/assets/ads-inside.png" alt="Ads Inside"><div><h1>GrowthScan by Ads Inside</h1><p>An evidence-led growth diagnostic</p></div></div><span class="small muted noprint">Internal runner</span></header>
+  <section class="card runner" aria-label="Run a scan">
+    <form id="f" class="runner" autocomplete="off">
+      <div class="row">
+        <input id="url" type="text" inputmode="url" placeholder="cedarcide.com" aria-label="Public website URL" autofocus>
+        <button class="primary" id="go" type="submit">Run GrowthScan</button>
+      </div>
+      <p class="small muted" style="margin:0">The shopping journey adds a product to a test cart on the target site and stops at checkout entry. Each product tested can register an add-to-cart event in that site’s analytics. No order is ever placed.</p>
+      <details class="adv">
+        <summary>Advanced options (optional)</summary>
+        <div class="grid">
+          <label class="f">Competitor domains (3–5 recommended, comma-separated)<input id="o-comp" type="text" placeholder="competitor1.com, competitor2.com, competitor3.com"></label>
+          <label class="f">Product page URLs (up to 5, comma-separated; default: 3 auto-selected)<input id="o-pdp" type="text" placeholder="cedarcide.com/products/…, …"></label>
+          <label class="f">Meta Page ID (resolves ads under a different name)<input id="o-page" type="text" placeholder="digits only"></label>
+          <label class="f">Brand name for ad/SERP searches<input id="o-brand" type="text" placeholder="defaults to the site name"></label>
+        </div>
+        <div style="margin-top:12px"><button class="ghost" id="review" type="button">Choose products to test (optional)</button> <span class="small muted">By default the scan tests up to 3 products automatically (all of them on small sites).</span></div>
+        <div id="sample" class="sample-pick" hidden style="margin-top:10px"></div>
+      </details>
+      <div class="err" id="err" role="alert"></div>
+    </form>
+  </section>
+  <main id="main"></main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

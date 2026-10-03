@@ -1,0 +1,22 @@
+# Render Blueprint. In Render: New → Blueprint → pick this GitHub repo → type APP_PASSWORD when asked → Apply.
+# The scanner runs Chromium + Lighthouse, so it needs a plan with at least 2 GB RAM (4 GB steadier) and a persistent disk (paid plans only).
+# Check Render's pricing page for current plan names and prices before choosing.
+services:
+  - type: web
+    name: growthscan
+    runtime: docker
+    plan: standard
+    healthCheckPath: /healthz
+    disk:
+      name: growthscan-data
+      mountPath: /data
+      sizeGB: 10
+    envVars:
+      - key: APP_PASSWORD
+        sync: false          # you type this once in Render; it is never stored in GitHub
+      - key: APP_USER
+        value: goodjoojoo
+      - key: GS_LH_RUNS
+        value: "3"
+      - key: PORT
+        value: "10000"

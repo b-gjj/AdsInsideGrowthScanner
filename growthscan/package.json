@@ -1,0 +1,24 @@
+{
+  "name": "growthscan-runner",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "GrowthScan Outside-In URL Runner for Ads Inside / Good Joo Joo",
+  "scripts": {
+    "start": "node src/server.js",
+    "scan": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "cheerio": "^1.2.0",
+    "chrome-launcher": "^1.2.2",
+    "express": "^5.2.1",
+    "lighthouse": "^13.5.0",
+    "playwright": "1.62.0",
+    "undici": "^8.11.2"
+  }
+}

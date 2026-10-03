@@ -1,0 +1,22 @@
+# Alternative: fly launch --no-deploy; fly volumes create gsdata --size 10; fly secrets set APP_PASSWORD=...; fly deploy
+app = "growthscan-gjj"
+primary_region = "dfw"
+[build]
+[env]
+  DATA_DIR = "/data"
+  APP_USER = "goodjoojoo"
+[mounts]
+  source = "gsdata"
+  destination = "/data"
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "off"
+  min_machines_running = 1
+  [[http_service.checks]]
+    path = "/healthz"
+    interval = "30s"
+    timeout = "5s"
+[[vm]]
+  size = "performance-2x"
+  memory = "4gb"

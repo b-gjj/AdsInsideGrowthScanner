@@ -1,0 +1,21 @@
+{
+  "_note": "Runner checks are harness-level SUBTESTS. Each maps to zero or more GrowthScan master v1.3 checks. 'not_in_master_v1_3' = supporting observation only; it never counts toward master coverage. Master coverage is computed from UNIQUE master IDs.",
+  "TECH-01": "not_in_master_v1_3",
+  "TECH-02": ["AIV-15"],
+  "TECH-03": ["AIV-13"],
+  "TECH-04": ["AIV-16"],
+  "TECH-05": ["AIV-14"],
+  "TECH-06": ["AIV-02", "AIV-03"],
+  "TECH-07": "not_in_master_v1_3",
+  "TECH-08": ["LFC-12"], "TECH-09": ["LFC-12"], "TECH-10": ["LFC-12"],
+  "TECH-11": "not_in_master_v1_3",
+  "PERF-01": ["CVR-01"], "PERF-02": ["CVR-01"], "PERF-03": ["CVR-01"], "PERF-04": ["CVR-01"], "PERF-05": ["CVR-01"], "PERF-06": ["CVR-01"],
+  "A11Y-01": ["CVR-19"], "A11Y-02": ["CVR-19"],
+  "SEO-01": "not_in_master_v1_3",
+  "JRN-01": "not_in_master_v1_3",
+  "JRN-02": ["CVR-11"], "JRN-03": ["CVR-12"], "JRN-04": ["CVR-10"],
+  "JRN-05": ["CVR-14"], "JRN-06": ["CVR-14"],
+  "JRN-07": ["CVR-15", "CVR-17"], "JRN-08": ["CVR-16", "CVR-17"],
+  "INTEL-01": ["ACQ-05"], "INTEL-02": ["ACQ-09"],
+  "INTEL-03": "not_in_master_v1_3", "INTEL-04": "not_in_master_v1_3", "INTEL-05": "not_in_master_v1_3"
+}
